@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <!-- <script src="./login.js" defer></script> -->
+</head>
+
+<body class="flex justify-center items-center h-screen dark:bg-slate-900 dark:text-white">
+    <div class="w-1/3 h-1/2 shadow-sm bg-slate-100/80 flex flex-col dark:shadow-slate-400/90 dark:bg-slate-700/80 justify-around items-center rounded-lg">
+        <h1 class="text-3xl text-center">Login</h1>
+        <form method="post" action="/login" class="flex flex-col justify-evenly items-center gap-4 w-full">
+            <div class="flex w-full justify-evenly">
+                <label for="username">Enter Username:</label>
+                <input type="email" id="username" name="username" class="dark:bg-slate-100/5 dark:rounded">
+            </div>
+            <div class="flex w-full justify-evenly">
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" name="password" class="dark:bg-slate-100/5 dark:rounded" >
+            </div>
+            <input type="submit" value="Login" class="hover:bg-slate-200 p-2 rounded-l dark:hover:bg-slate-300/20">
+        </form>
+        <!-- <div class="border-t-black border-t w-full flex justify-center items-center"> -->
+        <a href="signup">Signup</a>
+        <!-- </div> -->
+    </div>
+</body>
+
+</html>

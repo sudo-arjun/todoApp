@@ -1,0 +1,97 @@
+{
+    "sudo@gmail.com": {
+        "taskCollection": {
+            "1723279960194": {
+                "title": "wake up",
+                "details": "have to wake up",
+                "date": "2024-08-12",
+                "isDone": false
+            },
+            "1723279977853": {
+                "title": "go out",
+                "details": "have to go out",
+                "date": "",
+                "isDone": false
+            },
+            "1723445049990": {
+                "title": "new task",
+                "details": "details about task",
+                "date": "",
+                "isDone": false
+            },
+            "1723445102138": {
+                "title": "another new task",
+                "details": "new details",
+                "date": "",
+                "isDone": false
+            },
+            "1723445136053": {
+                "title": "final task",
+                "details": "final detail",
+                "date": "",
+                "isDone": false
+            },
+            "1723445164790": {
+                "title": "ok",
+                "details": "ok",
+                "date": "",
+                "isDone": false
+            },
+            "1723445753690": {
+                "title": "df",
+                "details": "",
+                "date": "",
+                "isDone": false
+            },
+            "1723445793073": {
+                "title": "1",
+                "details": "",
+                "date": "",
+                "isDone": false
+            },
+            "1723445846632": {
+                "title": "2",
+                "details": "",
+                "date": "",
+                "isDone": false
+            }
+        },
+        "taskSeq": [
+            "1723279960194",
+            "1723279977853",
+            "1723445049990",
+            "1723445102138",
+            "1723445136053",
+            "1723445164790",
+            "1723445753690",
+            "1723445793073",
+            "1723445846632"
+        ]
+    },
+    "chetan@gmail.com": {
+        "taskCollection": {
+            "1723466515789": {
+                "title": "maimt",
+                "details": "new maimt",
+                "date": "",
+                "isDone": true
+            }
+        },
+        "taskSeq": [
+            "1723466515789"
+        ]
+    },
+    "chetan.223100@maimt.com": {
+        "taskCollection": {
+            "1723466515789": {
+                "title": "maimt",
+                "details": "new maimt",
+                "date": "",
+                "isDone": false
+            }
+        },
+        "taskSeq": [
+            "1723466515789"
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "chetan@gmail.com": {
+        "password": "chetan",
+        "displayName": "SudoArjun"
+    },
+    "sudo@gmail.com": {
+        "password": "sudo",
+        "displayName": "sudo@gmail.com"
+    },
+    "undefined": {},
+    "chetan.223100@maimt.com": {
+        "password": "qwerty",
+        "displayName": "chetan.223100@maimt.com"
+    },
+    "testing.extra1@gmail.com": {
+        "password": "qwerty",
+        "displayName": "testing.extra1@gmail.com"
+    }
+}

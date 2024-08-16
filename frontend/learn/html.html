@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="../output.css" rel="stylesheet"> -->
+    <style>
+        .bg-black {
+            background-color: black;
+            color: white;
+        }
+
+        div:focus {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <div tabindex="1">
+        <input placeholder="title">
+        <input placeholder="details">
+    </div>
+    <input>
+    <script>
+        let div = document.querySelector('div');
+        document.addEventListener('focusin', (e) => {
+            if (!div.contains(document.activeElement)) {
+                console.log("moved outside");
+            }
+
+        }, false)
+        div.addEventListener('blur', () => {
+            console.log("blur")
+
+        })
+    </script>
+</body>
+
+</html>
