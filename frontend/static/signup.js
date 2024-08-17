@@ -19,6 +19,8 @@ submit.addEventListener('click', async (e) => {
     })
     let resData = await res.json();
     console.log(resData);
+    let p = document.querySelector('#msg')
+    p.innerHTML = resData?.msg
     if(resData.redirect != "/login"){
         console.log("resData: ",resData);
         res = await fetch('http://localhost:3000/wait');
