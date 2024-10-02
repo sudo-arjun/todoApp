@@ -116,16 +116,24 @@ function createTaskDOM() {
     let dateP = document.createElement('p');
     dateP.classList.add('hidden');
 
-    li.classList.add('flex', 'flex-col', 'w-1/2', 'h-32', 'justify-evenly', 'box-border', 'ring', 'm-2')
+    //Styling
+    li.classList.add('flex', 'flex-col', 'justify-center', 'w-full', 'max-w-lg', 'p-4', 'm-2', 'rounded-lg', 'bg-white', 'shadow-lg', 'justify-evenly', 'ring', 'transition-all', 'duration-300', 'hover:shadow-xl', 'ring-2', 'ring-gray-300')
     li.setAttribute('tabindex', '1');
     title.placeholder = 'Title';
-    title.classList.add('outline-none', 'read-only:bg-transparent')
+    title.classList.add('outline-none', 'text-lg', 'font-semibold', 'border-b', 'border-gray-300', 'py-1', 'px-2', 'focus:border-blue-500', 'transition-all', 'duration-300')
     details.placeholder = 'Details';
-    details.classList.add('outline-none', 'read-only:bg-transparent')
+    details.classList.add('outline-none', 'text-base', 'font-gray-600', 'border-b', 'border-gray-300', 'py-1', 'px-2', 'focus:border-blue-500', 'transition-all', 'duration-300')
     date.type = 'date';
-    date.classList.add('outline-none', 'read-only:bg-transparent')
+    date.classList.add('outline-none', 'text-base', 'font-gray-600', 'border-b', 'border-gray-300', 'py-1', 'px-2', 'focus:border-blue-500', 'transition-all', 'duration-300')
     check.setAttribute('type', 'checkbox');
+    check.classList.add('w-5','h-5','mt-2')
 
+    titleP.classList.add('text-lg', 'font-semibold', 'text-gray-800', 'mt-2', 'transition', 'duration-300');
+    detailsP.classList.add('text-base', 'text-gray-600', 'mt-1', 'transition', 'duration-300');
+    dateP.classList.add('text-sm', 'text-gray-500', 'mt-1', 'italic', 'transition', 'duration-300');
+
+    
+    // Checkbox toggle event
     check.addEventListener('change', taskIsDoneToggle)
 
     li.append(title, titleP, details, detailsP, date, dateP, check);
