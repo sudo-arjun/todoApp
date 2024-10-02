@@ -47,12 +47,17 @@ async function selectDocument(personMail){
     const result = await collection.findOne({email: personMail})
     return result;
 }
+async function select(query){
+    const result = await collection.findOne(query)
+    return result;
+}
 
 module.exports = {
     connect,
     insertDocument,
     updateDocument,
-    selectDocument
+    selectDocument,
+    select
 }
 
 // main()

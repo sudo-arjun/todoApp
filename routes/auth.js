@@ -4,7 +4,7 @@ const sendMail = require("../mail/sendMail");
 const events = require('events');
 const eventEmitter = new events.EventEmitter();
 const _dirname = "D:\\Code\\CQ\\todo";
-const db = require('../db/db.js')
+const db = require('../db/db.js');
 
 //login route
 router.route('/login').get((req, res) => {
@@ -23,18 +23,23 @@ router.route('/login').get((req, res) => {
     //     req.session.username = req.body.username;
     //     req.session.displayName = cred[req.body.username].displayName;
     //     res.redirect('/');
-    console.log(req.body.username);
-    let response = await db.selectDocument(req.body.username);
-    console.log(response);
-    if (response) {
-            req.session.isLoggedIn = true;
-            req.session.username = req.body.username;
-            res.redirect('/');
+    console.log(req.body)
+    if(req.body.password && req.body.username){
+        let response = await db.select({email: req.body.username, password: req.body.password});
+        if (response) {
+                req.session.isLoggedIn = true;
+                req.session.username = req.body.username;
+                res.redirect('/');
+        }
+        else {
+            //cred don't match
+            res.send({msg: "Enter correct Cred!"});
+        }
     }
-    else {
-        //cred don't match
-        res.send("Enter correct Cred!");
+    else{
+        res.send({msg: "Can not leave password or username blank"});
     }
+
     // res.sendFile(_dirname + '/frontend/home.html');
 
 })

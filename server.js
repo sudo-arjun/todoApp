@@ -3,6 +3,7 @@ const app = express();
 const session = require('express-session')
 app.use(express.static('frontend/static'))
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(session({
     secret: 'inu neko',
     resave: false,

@@ -21,16 +21,20 @@ router.get('/tasks', async (req, res) => {
 router.post('/tasks', async (req, res) => {
     //save tasks
     let tasks = req.body;
-    console.log(tasks);
-    // let dataFile = await fs.readFile('./data.json');
-    // let data = JSON.parse(dataFile);
-    // data[req.session.username] = tasks;
-    // await fs.writeFile('./data.json', JSON.stringify(data));
-    await db.updateDocument({ email: req.session.username }, {
-        taskCollection: tasks.taskCollection,
-        taskSeq: tasks.taskSeq
-    })
-    res.end("success");
+    console.log(req.session.username, tasks);
+    if(req.session.username){
+
+        // let dataFile = await fs.readFile('./data.json');
+        // let data = JSON.parse(dataFile);
+        // data[req.session.username] = tasks;
+        // await fs.writeFile('./data.json', JSON.stringify(data));
+        await db.updateDocument({ email: req.session.username }, {
+            taskCollection: tasks.taskCollection,
+            taskSeq: tasks.taskSeq
+        })
+        return res.send({msg: "success"});
+    }
+    res.redirect('/');
 })
 
 module.exports = router;
